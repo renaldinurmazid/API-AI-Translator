@@ -8,6 +8,7 @@ const int = (value, fallback) => {
 function loadConfig(env = process.env) {
   return {
     port: int(env.PORT, 3000),
+    host: env.HOST || '0.0.0.0',
     provider: {
       name: env.AI_PROVIDER || 'gemini',
       apiKey: env.GEMINI_API_TOKEN || env.GEMINI_API_KEY || '',

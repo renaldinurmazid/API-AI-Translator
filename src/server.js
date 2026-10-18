@@ -20,5 +20,5 @@ if (!config.provider.apiKey) {
 const { app, store } = createApp({ config, provider: createProvider(config.provider) });
 setInterval(() => store.sweep(), 60_000).unref();
 
-const server = app.listen(config.port, () => console.log(`API berjalan di http://0.0.0.0:${config.port}`));
+const server = app.listen(config.port, config.host, () => console.log(`API berjalan di http://${config.host}:${config.port}`));
 for (const sig of ['SIGINT', 'SIGTERM']) process.on(sig, () => server.close(() => process.exit(0)));

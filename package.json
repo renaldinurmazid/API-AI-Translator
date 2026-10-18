@@ -15,9 +15,9 @@
   "dependencies": {
     "express": "^5.3.0",
     "multer": "^2.4.0",
-    "music-metadata": "^12.2.2"
+    "music-metadata": "^10.9.1"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=20.12"
   }
 }
